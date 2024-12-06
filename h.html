@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<title>Login Form</title>
+<style>
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Body Styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #efe0d3, #d9c2ad);
+    font-size: 16px;
+}
+
+/* Form Styling */
+form {
+    width: 100%;
+    max-width: 400px;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    border: 2px solid #6c2a11;
+}
+
+/* Form Title */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #6c2a11;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+/* Input Fields */
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 14px 15px;
+    margin: 12px 0;
+    border: 1px solid #d9c2ad;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+    background: #efe0d3;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #6c2a11;
+    box-shadow: 0 0 5px rgba(108, 42, 17, 0.5);
+}
+
+/* Button Styling */
+button {
+    width: 100%;
+    padding: 14px 20px;
+    background: #6c2a11;
+    color: #ffffff;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-top: 12px;
+}
+
+button:hover {
+    background: #491e0d;
+    transform: translateY(-2px);
+}
+
+/* Cancel Button */
+.cancelbtn {
+    background: #d9c2ad;
+    color: #6c2a11;
+    margin-top: 12px;
+    border: 1px solid #6c2a11;
+}
+
+.cancelbtn:hover {
+    background: #6c2a11;
+    color: #ffffff;
+}
+
+/* Additional Options */
+.container label {
+    display: block;
+    margin: 10px 0;
+    color: #6c2a11;
+    font-size: 14px;
+}
+
+.container label input {
+    margin-right: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    form {
+        padding: 15px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+</style>
+</head>
+<body>
+
+<form action="/action_page.php" method="post">
+  <h2>Login</h2>
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+        
+    <button type="submit">Login</button>
+    <label>
+      <input type="checkbox" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="container" style="text-align: center;">
+    <button type="button" class="cancelbtn">Cancel</button>
+  </div>
+</form>
+
+</body>
+</html>
